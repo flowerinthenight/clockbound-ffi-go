@@ -1,4 +1,4 @@
-package clockboundclient
+package clockbound
 
 import (
 	"fmt"
