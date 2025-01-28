@@ -32,8 +32,9 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
+        export LD_LIBRARY_PATH=$PWD/ffi-deps
+        echo "libpath: $LD_LIBRARY_PATH"
         cd example/
-        export LD_LIBRARY_PATH=ffi-deps
         C_INCLUDE_PATH=ffi-deps GOOS=linux GOARCH=amd64 go build -v
         tar czvf cbfficlient-${GITHUB_REF_NAME}-x86_64-linux.tar.gz example
         gh release create ${GITHUB_REF_NAME} ./*.tar.gz --generate-notes
