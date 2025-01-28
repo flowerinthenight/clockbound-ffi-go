@@ -25,6 +25,7 @@ jobs:
 
     - name: Run tests
       run: |
+        sudo cp ffi-deps/clockbound.h /usr/include/
         C_INCLUDE_PATH=ffi-deps go test -v ./...
 
     - name: Release from tags
