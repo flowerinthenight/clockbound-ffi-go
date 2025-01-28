@@ -24,5 +24,9 @@ jobs:
 
     - name: Run tests
       run: |
-        sudo cp -v ffi-deps/clockbound.h /usr/include/
+        ROOTDIR=$PWD
+        cd /tmp/
+        git clone https://github.com/aws/clock-bound
+        sudo cp -v clock-bound/clock-bound-ffi/include/clockbound.h /usr/include/
+        cd $ROOTDIR/
         go test -v ./...
