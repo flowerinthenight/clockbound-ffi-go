@@ -18,7 +18,7 @@ $ [sudo] cp target/release/libclockbound.a /usr/lib/
 $ [sudo] cp target/release/libclockbound.so /usr/lib/
 ```
 
-Usage looks something like this. You also need to have a C compiler for `CGO`.
+Usage looks something like this (you need to have a C compiler for `CGO`):
 
 ```go
 import (
