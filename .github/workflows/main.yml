@@ -24,10 +24,9 @@ jobs:
         go-version: '1.23'
 
     - name: Run tests
-      run: go test -v ./...
-
-    - name: Build binary
-      run: go build -v
+      run: |
+        cp ffi-deps/clockbound.h /usr/include/
+        go test -v ./...
 
     - name: Release from tags
       if: startsWith(github.event.ref, 'refs/tags/v')
