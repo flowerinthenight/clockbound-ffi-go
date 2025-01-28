@@ -25,17 +25,17 @@ jobs:
 
     - name: Run tests
       run: |
-        sudo cp ffi-deps/clockbound.h /usr/include/
-        C_INCLUDE_PATH=ffi-deps go test -v ./...
+        sudo cp -v ffi-deps/clockbound.h /usr/include/
+        go test -v ./...
 
     - name: Release from tags
       if: startsWith(github.event.ref, 'refs/tags/v')
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        export C_INCLUDE_PATH=$PWD/ffi-deps
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD/ffi-deps
-        echo "libpath: $LD_LIBRARY_PATH, include: $C_INCLUDE_PATH"
+        sudo cp -v ffi-deps/clockbound.h /usr/include/
+        sudo cp -v ffi-deps/libclockbound.a /usr/lib/
+        sudo cp -v ffi-deps/libclockbound.so /usr/lib/
         cd example/
         GOOS=linux GOARCH=amd64 go build -v
         tar czvf cbfficlient-${GITHUB_REF_NAME}-x86_64-linux.tar.gz example
