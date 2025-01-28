@@ -27,15 +27,3 @@ jobs:
       run: |
         sudo cp -v ffi-deps/clockbound.h /usr/include/
         go test -v ./...
-
-    - name: Release from tags
-      if: startsWith(github.event.ref, 'refs/tags/v')
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        sudo cp -v ffi-deps/clockbound.h /usr/include/
-        sudo cp -v ffi-deps/libclockbound.a /usr/lib/
-        cd example/
-        GOOS=linux GOARCH=amd64 go build -v
-        tar czvf cbfficlient-${GITHUB_REF_NAME}-x86_64-linux.tar.gz example
-        gh release create ${GITHUB_REF_NAME} ./*.tar.gz --generate-notes
