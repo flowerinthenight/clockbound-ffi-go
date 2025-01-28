@@ -32,7 +32,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        export LD_LIBRARY_PATH=$PWD/ffi-deps
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD/ffi-deps
         echo "libpath: $LD_LIBRARY_PATH"
         cd example/
         C_INCLUDE_PATH=ffi-deps GOOS=linux GOARCH=amd64 go build -v
