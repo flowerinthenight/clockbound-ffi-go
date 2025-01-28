@@ -14,6 +14,7 @@ $ cd clock-bound/clock-bound-ffi/
 $ cargo build --release
 $ cd ../
 $ [sudo] cp clock-bound-ffi/include/clockbound.h /usr/include/
+$ [sudo] cp target/release/libclockbound.a /usr/lib/
 $ [sudo] cp target/release/libclockbound.so /usr/lib/
 ```
 
