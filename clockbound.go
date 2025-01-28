@@ -77,10 +77,10 @@ type Client struct {
 func (c *Client) Now() (Now, error) {
 	code := c.error.Load()
 	if code != 0 {
-		err := fmt.Errorf("Now failed: %d", code)
+		err := fmt.Errorf("Now failed: %v", code)
 		i := ClockBoundErrorKind(code)
 		if _, ok := ClockBoundErrorKindName[i]; ok {
-			err = fmt.Errorf("%v", ClockBoundErrorKindName[i])
+			err = fmt.Errorf("Now failed: %v", ClockBoundErrorKindName[i])
 		}
 
 		return Now{}, err
