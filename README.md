@@ -34,3 +34,7 @@ func main() {
 ```
 
 Check out the provided [example](./example/main.go) code for a more complete reference on how to use the client.
+
+## License
+
+This library is licensed under the [MIT License](./LICENSE).
