@@ -1,4 +1,5 @@
 [![main](https://github.com/flowerinthenight/clockbound-ffi-go/actions/workflows/main.yml/badge.svg)](https://github.com/flowerinthenight/clockbound-ffi-go/actions/workflows/main.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/flowerinthenight/clockbound-ffi-go.svg)](https://pkg.go.dev/github.com/flowerinthenight/clockbound-ffi-go)
 
 ## clockbound-ffi-go
 
