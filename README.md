@@ -15,3 +15,22 @@ $ cd ../
 $ [sudo] cp clock-bound-ffi/include/clockbound.h /usr/include/
 $ [sudo] cp target/release/libclockbound.so /usr/lib/
 ```
+
+Usage looks something like this:
+
+```go
+import (
+  ...
+  "github.com/flowerinthenight/clockbound-ffi-go"
+)
+
+func main() {
+  // error checks redacted
+  client, _ := clockbound.New()
+  now, _ := client.Now()
+  ...
+  client.Close()
+}
+```
+
+Check out the provided [example](./example/main.go) code for a more complete reference on how to use the client.
