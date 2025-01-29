@@ -31,8 +31,6 @@ jobs:
         sudo cp -v clock-bound/clock-bound-ffi/include/clockbound.h /usr/include/
         cd $ROOTDIR/
         go test -v ./...
-        cd example/
-        go build -v
 
     - name: Release from tags
       if: startsWith(github.event.ref, 'refs/tags/v')
