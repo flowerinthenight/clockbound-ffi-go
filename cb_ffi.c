@@ -45,8 +45,5 @@ int cb_now(int *e_s, int *e_ns, int *l_s, int *l_ns, int *s) {
   *l_ns = now.latest.tv_nsec;
   *s = now.clock_status;
 
-  printf("size(s) : %ld\n", sizeof(now.earliest.tv_sec));
-  printf("size(ns): %ld\n", sizeof(now.earliest.tv_nsec));
-
   return 0;
 }
