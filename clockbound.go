@@ -136,8 +136,9 @@ func New() *Client {
 			case <-c.get:
 			}
 
-			var earliest_s, latest_s, status C.int
-			var earliest_ns, latest_ns C.int
+			var earliest_s, earliest_ns C.int
+			var latest_s, latest_ns C.int
+			var status C.int
 
 			c.error.Store(int32(C.cb_now(
 				&earliest_s,
