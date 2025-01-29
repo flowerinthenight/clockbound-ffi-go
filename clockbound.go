@@ -109,7 +109,8 @@ func (c *Client) Close() {
 	<-c.done
 }
 
-// New creates an instance of Client.
+// New creates an instance of Client. A goroutine is used
+// to have more control on who owns the SHM context.
 func New() *Client {
 	c := &Client{}
 	c.get = make(chan struct{}, 1)
