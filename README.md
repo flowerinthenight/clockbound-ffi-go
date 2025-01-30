@@ -3,7 +3,7 @@
 
 ## clockbound-ffi-go
 
-A Go client for [AWS ClockBound](https://github.com/aws/clock-bound) using the provided [FFI](https://github.com/aws/clock-bound/tree/main/clock-bound-ffi) (requires [CGO](https://pkg.go.dev/cmd/cgo)).
+A Go client for [aws/clock-bound](https://github.com/aws/clock-bound) using the provided [FFI](https://github.com/aws/clock-bound/tree/main/clock-bound-ffi) (requires [CGO](https://pkg.go.dev/cmd/cgo)).
 
 The [ClockBound daemon](https://github.com/aws/clock-bound/tree/main/clock-bound-d) must be running in order to use this library, as well as the dependencies from the FFI.
 
