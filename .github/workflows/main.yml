@@ -64,6 +64,6 @@ jobs:
         # cp -v /tmp/clock-bound/clock-bound-ffi/include/clockbound.h .
         # cp -v /tmp/clock-bound/target/release/libclockbound.a .
         # CC="$(which zig) cc -target x86_64-linux-musl -I. -I/usr/local/musl/include" GOOS=linux GOARCH=amd64 go build -v --ldflags '-linkmode=external -extldflags=-static'
-        CC="$(which zig) cc -target x86_64-linux-musl -L/usr/local/musl/lib -lunwind" GOOS=linux GOARCH=amd64 go build -v --ldflags '-linkmode=external -extldflags=-static'
+        CC="$(which zig) cc -target x86_64-linux-musl -I/usr/local/musl/include -L/usr/local/musl/lib -lunwind" GOOS=linux GOARCH=amd64 go build -v --ldflags '-linkmode=external -extldflags=-static'
         tar czvf cbffisample-${GITHUB_REF_NAME}-x86_64-linux.tar.gz example
         gh release create ${GITHUB_REF_NAME} ./*.tar.gz --generate-notes
