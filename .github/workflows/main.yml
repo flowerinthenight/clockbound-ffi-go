@@ -36,7 +36,8 @@ jobs:
         sudo cp -v clock-bound/clock-bound-ffi/include/clockbound.h /usr/include/
         cd $ROOTDIR/
         go test -v ./...
-        zig version
+        echo "Zig version $(zig version)"
+        echo "Zig location $(which zig)"
 
     - name: Release from tags
       if: startsWith(github.event.ref, 'refs/tags/v')
