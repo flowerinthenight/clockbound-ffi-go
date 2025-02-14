@@ -58,7 +58,7 @@ jobs:
         # sudo mkdir -p /usr/local/musl/include/
         # sudo mkdir -p /usr/local/musl/lib/
         sudo cp -v clock-bound-ffi/include/clockbound.h /usr/local/musl/include/
-        sudo cp -v target/release/libclockbound.a /usr/local/musl/lib/
+        sudo cp -v target/x86_64-unknown-linux-musl/release/libclockbound.a /usr/local/musl/lib/
         cd $ROOTDIR/example/
         # GOOS=linux GOARCH=amd64 go build -v
         # cp -v /tmp/clock-bound/clock-bound-ffi/include/clockbound.h .
