@@ -58,6 +58,6 @@ jobs:
         cd $ROOTDIR/example/
         # GOOS=linux GOARCH=amd64 go build -v
         cp -v /tmp/clock-bound/clock-bound-ffi/include/clockbound.h .
-        CC="$(which zig) cc -target x86_64-linux-musl" GOOS=linux GOARCH=amd64 go build -v
+        CC="$(which zig) cc -target x86_64-linux-musl -I. -I/usr/local/musl/include" GOOS=linux GOARCH=amd64 go build -v
         tar czvf cbffisample-${GITHUB_REF_NAME}-x86_64-linux.tar.gz example
         gh release create ${GITHUB_REF_NAME} ./*.tar.gz --generate-notes
