@@ -2,13 +2,13 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/flowerinthenight/clockbound-ffi-go.svg)](https://pkg.go.dev/github.com/flowerinthenight/clockbound-ffi-go)
 
 > [!IMPORTANT]  
-> This library is still using the `main-2.0` branch of the [ClockBound daemon](https://github.com/aws/clock-bound/tree/main/clock-bound-d).
+> This library is still using the `main-2.0` branch of the [ClockBound daemon](https://github.com/aws/clock-bound).
 
 ## clockbound-ffi-go
 
 A Go client for [aws/clock-bound](https://github.com/aws/clock-bound) using the provided [FFI](https://github.com/aws/clock-bound/tree/main/clock-bound-ffi) (requires [CGO](https://pkg.go.dev/cmd/cgo)).
 
-The [ClockBound daemon](https://github.com/aws/clock-bound/tree/main/clock-bound-d) must be running in order to use this library, as well as the dependencies from the FFI.
+The [ClockBound daemon](https://github.com/aws/clock-bound) must be running in order to use this library, as well as the dependencies from the FFI.
 
 ```sh
 # Rust environment is expected to be installed.
