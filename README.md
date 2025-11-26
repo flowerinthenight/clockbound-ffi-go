@@ -12,7 +12,7 @@ The [ClockBound daemon](https://github.com/aws/clock-bound/tree/main/clock-bound
 
 ```sh
 # Rust environment is expected to be installed.
-$ git clone https://github.com/aws/clock-bound
+$ git clone --single-branch -b main-2.0 https://github.com/aws/clock-bound
 $ cd clock-bound/clock-bound-ffi/
 $ cargo build --release
 $ cd ../
