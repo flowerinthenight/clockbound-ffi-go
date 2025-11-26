@@ -1,6 +1,9 @@
 [![main](https://github.com/flowerinthenight/clockbound-ffi-go/actions/workflows/main.yml/badge.svg)](https://github.com/flowerinthenight/clockbound-ffi-go/actions/workflows/main.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/flowerinthenight/clockbound-ffi-go.svg)](https://pkg.go.dev/github.com/flowerinthenight/clockbound-ffi-go)
 
+> [!IMPORTANT]  
+> This library is still using the `main-2.0` branch of the [ClockBound daemon](https://github.com/aws/clock-bound/tree/main/clock-bound-d).
+
 ## clockbound-ffi-go
 
 A Go client for [aws/clock-bound](https://github.com/aws/clock-bound) using the provided [FFI](https://github.com/aws/clock-bound/tree/main/clock-bound-ffi) (requires [CGO](https://pkg.go.dev/cmd/cgo)).
